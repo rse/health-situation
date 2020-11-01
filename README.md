@@ -19,6 +19,7 @@ Requirements
 
 This software requires Node.js's `node` and `npm` commands, Poppler's
 `pdftocairo` command and PrinceXML's `prince` command in your `$PATH`.
+It also requires a running Browserless/Puppeteer instance somewhere on the network.
 
 Copyright & License
 -------------------
