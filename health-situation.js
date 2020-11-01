@@ -47,7 +47,7 @@ const mkdirp    = require("mkdirp")
             verbose(2, "connecting to remote browser")
             process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
             this.browser = await puppeteer.connect({
-                browserWSEndpoint: "ws://10.16.19.7:3000/browserless/?token=scraper",
+                browserWSEndpoint: process.env.PUPPETEER_URL,
                 defaultViewport:   { width: 1024, height: 2048, deviceScaleFactor: 2 }
             })
             this.page = await this.browser.newPage()
