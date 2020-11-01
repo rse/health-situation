@@ -1,0 +1,67 @@
+/*
+**  Health-Situation -- Scraping Current Health Situation Information
+**  Copyright (c) 2020 Dr. Ralf S. Engelschall <rse@engelschall.com>
+**  Licensed under GPL 3.0 <https://spdx.org/licenses/GPL-3.0-only>
+*/
+
+@import "node_modules/typopro-web/web/TypoPRO-SourceSansPro/TypoPRO-SourceSansPro.css";
+
+@page landscape {
+    size: A4 landscape;
+    margin: 2cm;
+}
+@page portrait {
+    size: A4 portrait;
+    margin: 2cm;
+}
+.page-break {
+    border: none;
+    margin-top: 0;
+    page-break-before: always;
+}
+body {
+    font-size: 11pt;
+    font-family: "TypoPRO Source Sans Pro";
+    page: portrait;
+}
+div.body {
+    width: auto;
+}
+h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    background-color: #004890;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #2068b0;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #2068b0;
+}
+a:visited {
+    color: #2068b0;
+}
+
+.type {
+    font-weight: 200;
+    color: #999999;
+    padding-right: 10px;
+}
+

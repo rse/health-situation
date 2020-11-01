@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+**
+**  Health-Situation - Scraping Current Health Situation Information
+**  Copyright (c) 2020 Dr. Ralf S. Engelschall <rse@engelschall.com>
+**  Licensed under GPL 3.0 <https://spdx.org/licenses/GPL-3.0-only>
+**
+-->
+<html>
+    <head>
+        <title>Aktuelle Gesundheitssituation</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="health-situation.css"/>
+    </head>
+    <body>
+        <h1>Aktuelle Gesundheitssituation</h1>
+
+        <h2>Überblick</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>,
+        das <a href="https://www.divi.de/register/tagesreport">DIVI-Intensivregister</a>
+        das <a href="https://www.destatis.de/">Statistische Bundesamt</a>,
+        <a href="https://www.euromomo.eu/">EuroMOMO</a>,
+        <a href="https://www.google.com/">Google</a> und
+        die <a href="https://www.who.int/">WHO</a> liefern zahlreiche Informationen zum
+        aktuellen Infektionsgeschehen, den Testungen und den Sterberaten
+        im Kontext der Corona-Pandemie. Alle aufgeführten Informationen
+        stammen von diesen Quellen und werden hier nur aggregiert, um
+        eine übergreifende Sicht auf die Informationen zu gewissen.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Der Überblick über die wichtigsten statistischen Trends
+        liefert einen ersten Eindruck der aktuellen Situation.
+        Man sieht, daß der Anteil der positiven COVID-19 Testungen
+        steigt, daß der Anteil der COVID-19 Fälle unter den
+        Atemwegserkrankungen steigt, daß die Anzahl positiver
+        COVID-19 Testung steigt, daß der 7-Tage-Inzidenz-Wert
+        steigt, daß die Anzahl COVID-19 Patienten auf Intensivstationen
+        steigen und daß die Anzahl Todesfälle durch COVID-19 steigen.
+        Mehr Details dann in den folgenden Abschnitten.
+
+        <p/>
+        <table style="width: 15cm;">
+            <tr>
+                <td>
+                    <img src="health-situation.dst.d/rki-ars-1.svg" style="width: 9cm;"/>
+                </td>
+                <td>
+                    <img src="health-situation.dst.d/rki-influenza-2.svg" style="width: 9cm;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="health-situation.dst.d/rki-corona-2.svg" style="width: 9cm;"/>
+                </td>
+                <td>
+                    <img src="health-situation.dst.d/rki-corona-heatmap-lk-dachau.svg" style="width: 8cm;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="health-situation.dst.d/divi-2.svg" style="width: 9cm;"/>
+                </td>
+                <td>
+                    <img src="health-situation.dst.d/google-1.png" style="width: 8cm;"/>
+                </td>
+            </tr>
+        </table>
+
+        <h2 class="page-break">Influenza (Infektionsgeschehen)</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        liefert mit dem <a href="https://influenza.rki.de/">Influenza Wochenbericht</a>
+        Informationen über das aktuelle Infektionsgeschehen in Deutschland.
+        Über das Projekt <i>GrippeWeb</i>
+        werden die <i>akuten Atemwegserkrankungen (ARE)</i> (mit und ohne Fieber) über
+        Hinweise von Bürgern verfolgt.
+        Die Rate der <i>grippeähnlichen Erkrankungen (ILI)</i> (definiert als ARE mit Fieber)
+        wird dagegen über die Meldungen von Haus- und Kinderarztpraxen, also aus dem
+        ambulaten Bereich, von der <i>Arbeitsgemeinschaft Influenza
+        (AGI)</i> ausgewertet. Der Praxisindex ist eine Art normalisierte Variante der ILI-Informationen.
+        Das RKI ermittelt außerdem mit der
+        <i>ICD-10-Code basierten Krankenhaussurveillance schwerer akuter
+        respiratorischer Infektionen (ICO-SARI)</i> die Gesamtzahl
+        <i>stationär behandelter Fälle mit akuten respiratorischen
+        Infektionen (SARI)</i>, also von akuten Atemwegserkrankungen.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Die ARE/ILE Kurven zeigen den üblichen Verlauf der jährlichen
+        Grippewellen in Prozent der betroffenen Bürger. Die Grippewelle
+        steigt meist ab KW36 (Mitte September) an und endet in KW13
+        (Ende März). Ein Höhepunkt ist immer im Februar eines jeden
+        Jahres zu verzeichnen. Der normalisierte Praxisindex zeigt
+        ebenfalls, daß zwischen spätestens KW44 (Anfang November)
+        und KW13 (Ende März) die jährliche Grippewelle existiert.
+        Die SARI-Statistik zeigt zusätzlich diese Grippewelle aus
+        Krankenhausperspektive, zusammen mit den anteiligen bekannten
+        COVID-19 Fällen. Bei der Unterscheidung nach Alter sieht man,
+        daß die akuten Atemwegserkrankungen (SARI) eher bei älteren
+        Personen auftreten, COVID-19 dagegen eher bei den jüngeren
+        Personen.
+
+        <p/>
+        <img src="health-situation.dst.d/rki-grippeweb-1.png" width="50%"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-grippeweb-2.png" width="50%"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-influenza-1.svg" width="90%"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-influenza-2.svg" width="100%"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-influenza-3.svg" width="100%"/>
+
+        <h2 class="page-break">Influenza (Erreger)</h2>
+
+        <span class="type">Quelle</span>
+        Die <a href="https://www.who.int/">WHO</a>
+        liefert mit <i>FluNet</i> und ihrem <i>Global Influenza Surveillance and Response System (GISRS)</i>>
+        Informationen über das Infektionsgeschehen des Grippevirus in allen Ländern.
+        Hier betrachten wir insbesondere die Informationen für Europa.
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        liefert zusätzlich in ihrem <a href="https://influenza.rki.de/">Influenza Wochenbericht</a>
+        Informationen über die virologischen Analysen für Influenzaviren.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Man sieht, daß in den letzten Monaten laut WHO so gut wie keinerlei
+        Fälle mehr von Influenza nachgewiesen wurden. Stattdessen sind
+        für die akuten Atemwegserkrangungen und Erkältungskrankheiten
+        laut RKI vor allem Rhinoviren und teilweise der Coronavirus
+        SARS-CoV-2 schuld. Influenza-Viren sind aber sowohl laut WHO als
+        auch RKI aktuell so gut wie gar nicht im Umlauf.
+
+        <p/>
+        <img src="health-situation.dst.d/who-1.png" width="100%"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-influenza-4.svg" width="100%"/>
+
+        <h2 class="page-break">Corona</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        liefert mit dem <i>Täglichen Lagebericht zu COVID-19</i>
+        dedizierte Informationen über das aktuelle Corona-Infektionsgeschehen in Deutschland.
+        Das RKI ermittelt dabei vor allem drei Kennzahlen: die aktuellen <i>COVID-19 Infektionsfälle</i>
+        (positiv getestete Personen),
+        die sogenannte <i>7-Tage-Inzidenz</i> (Anzahl Fälle auf 100.000 Einwohner innerhalb von 7 Tagen)
+        und den <i>7-Tage-R-Wert</i> (Reproduktionszahl: wieviele Personen werden durchschnittlich
+        von einer Person angesteckt).
+        Die <i>7-Tage-Inzidenz</i> Werte stehen zusätzlich als regional ausgewertete "Heatmaps", basierend
+        auf den RKI-Daten, zur
+        Verfügung. Basierend auf dem <i>7-Tage-R-Wert</i> kann außerdem eine statistisch ermittelte
+        Prognose des weiteren Infektionsgeschehens gegeben werden.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Der "Anteil Verstorbene" zeigt die Fallsterblichkeitsrate
+        (Letalitätsrate), welche bei COVID-19 in Deutschland bei
+        etwas mehr als 2% liegt. Bei einer normalen Influenza wird
+        im Vergleich von nur 0,1-0,2% ausgegangen. Allerdings
+        werden die Raten von Corona und Influenza
+        unterschiedlich ermittelt: bei Corona zählen die
+        Toten, die zuvor oder zum Todeszeitpunkt positiv auf Corona
+        getestet wurden (und somit "an", oder eventuell auch nur "mit",
+        Corona starben), während bei Influenza eine sogenannte
+        "Übersterblichkeit" ermittelt wird (also wieviele Personen mehr
+        starben -- aus egal welchem Grund -- pro Monat als in anderen
+        Monaten). Wenn der 7-Tage-Inzidenz-Wert über 50 steigt, werden
+        üblicherweise zusätzliche Maßnahmen von der Politik
+        ergriffen. Bei den Heatmaps zoomen wir von Bayern in den Raum
+        München und dort von Nord/West (Dachau), über das zentrale
+        Stadtgebiet München nach Ost/Süd (Landkreis München).
+        Auf der X-Achse sind die Kalenderwochen (KW) zu sehen, auf der Y-Achse
+        die Altersgruppen. In den Zellen zeigen die roten Flecken
+        die zeitlich aufgetretenen Hotspots über den jeweiligen
+        7-Tage-Inzidenz-Wert.
+
+        <p/>
+        <img src="health-situation.dst.d/rki-corona-1.svg" width="100%" style="position: relative; left: -10px;"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-corona-2.svg" width="100%" style="position: relative; left: -10px;"/>
+        <p/>
+        <img src="health-situation.dst.d/rki-corona-3.svg" width="50%"/>
+
+        <p class="page-break"/>
+        <img src="health-situation.dst.d/rki-corona-4.svg" width="90%"/>
+
+        <p/>
+        <img src="health-situation.dst.d/rki-corona-heatmap-bayern.svg" width="70%"/>
+        <img src="health-situation.dst.d/rki-corona-heatmap-lk-dachau.svg" width="70%"/>
+        <img src="health-situation.dst.d/rki-corona-heatmap-sk-muenchen.svg" width="70%"/>
+        <img src="health-situation.dst.d/rki-corona-heatmap-lk-muenchen.svg" width="70%"/>
+
+        <h2 class="page-break">Corona Testungen</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        liefert wöchentliche Informationen über das Testverhaltens im ambulanten und stationären Sektor in
+        seiner <a href="https://ars.rki.de/Content/COVID19/Main.aspx">Laborbasierte Surveillance von SARS-CoV-2</a>.
+        Es werden die Anzahl durchgeführter SARS-COV-2-PCR-Testungen
+        pro Woche und der jeweilige Anteil positiver Testungen
+        ausgewiesen.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Es werden während der zweiten Corona-Welle wieder mehr
+        Testungen durchgeführt als zuvor. Wenn mehr Testungen in Summe
+        durchgeführt werden, steigen auch die Infektionsfallzahlen, aber nicht
+        automatisch auch der Anteil positiver Testungen. Deswegen sollte
+        hier eher auf das <em>Verhältnis</em> zwischen den Trends
+        beider Kenngrößen geschaut werden und auf den Anteil positiver
+        Testungen, unabhängig davon wieviele Testungen in Summe gerade
+        gemacht werden. Eine Testung selbst dauert heutzutage meist nur noch
+        bis zu 2 Tage.
+
+        <p/>
+        <img src="health-situation.dst.d/rki-ars-1.svg" width="100%"/>
+        <img src="health-situation.dst.d/rki-ars-2.svg" width="100%"/>
+
+        <h2 class="page-break">Intensivbettenkapazitäten</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.divi.de/register/tagesreport">DIVI-Intensivregister</a>
+        ist eine Datenerfassung für Intensivbettenkapazitäten und aggregierter Fallzahlen
+        in Deutschland. Es wird in Zusammenarbeit der
+        <a href="https://www.divi.de/">Deutschen Interdisziplinären Vereinigung für Intensiv- und
+        Notfallmedizin (DIVI)</a> und dem
+        <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        betrieben.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Unter "ITS-Betten Gesamt" sieht man, daß in Deutschland
+        etwa 29.000 Intensivbetten existieren, wovon unter "in
+        intensivmedizinischer Behandlung" nur ein Teil COVID-19
+        Patienten sind und "davon invasiv beatmet" ebenfalls nur ein
+        gewisser Anteil. Unter der roten Trendkurve "ITS COVID-19
+        Fälle" sieht man, wieviele Corona-Patienten jeweils zum
+        aktuellen Zeitpunkt auf Intensivstationen behandelt wurden.
+        Diese Kurve zeigt die aktuelle Kritikalität von Corona am effektivsten.
+
+        <p/>
+        <img src="health-situation.dst.d/divi-1.svg" width="115%" style="position: relative; left: -15px;"/>
+        <p/>
+        <img src="health-situation.dst.d/divi-2.svg" width="120%" style="position: relative; left: -20px;"/>
+
+        <h2 class="page-break">Sterblichkeit</h2>
+
+        <span class="type">Quelle</span>
+        Das <a href="https://www.destatis.de/">Statistische Bundesamt</a>
+        liefert Statistiken zur allgemeinen Sterblichkeitsrate in Deutschland auf
+        Wochenbasis und im Vergleich zu den Vorjahren.
+        <a href="https://www.euromomo.eu/">EuroMOMO</a> liefert ebenfalls
+        langjährige Trend-Informationen über die wöchentlichen Sterblichkeitsraten
+        in Europa.
+        Das <a href="https://www.rki.de/">Robert Koch-Institut (RKI)</a>
+        liefert die COVID-19 Todesfälle auf Wochenbasis,
+        visualisiert durch Google/Wikipedia.
+
+        <p/>
+        <span class="type">Interpretation</span>
+        Im April 2020 existierte eine erhöhte Sterblichkeitsrate,
+        die durch COVID-19 verursacht wurde. Seither ist dies aber
+        nicht erneut der Fall gewesen. In der Grippehochzeit (Februar)
+        und im Hochsommer (Juli/August) steigt die Sterblichkeitsrate
+        üblicherweise sowieso deutlich an. Aktuell steigt die absolute Anzahl
+        der COVID-19 Todesfälle wieder an. Aber nicht so stark wie die
+        aktuellen Infektionsfallzahlen selbst, denn viele Infektionen
+        führen zu keiner oder nur geringen gesundheitlichen Problemen,
+        nur manche führen zu einer notwendigen Behandlung und nur ein
+        kleinerer Teil ist am Ende tödlich. Außerdem sollte beachtet
+        werden, daß ein "COVID-19-Todesfall" bedeutet, daß der Tote
+        zum Todeszeitpunkt positiv auf Corona getestet wurde und somit
+        sowohl "an" als auch eventuell nur "mit" Corona starb.
+
+        <p/>
+        <img src="health-situation.dst.d/destatis-1.png" width="100%" style="position: relative; left: -5px;"/>
+        <p/>
+        <img src="health-situation.dst.d/google-1.png" width="100%" style="position: relative; left: -5px;"/>
+        <p/>
+        <img src="health-situation.dst.d/euromomo-1.png" width="100%" style="position: relative; left: -5px;"/>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+{
+    "name":                         "health-sitation",
+    "homepage":                     "http://github.com/rse/health-situation",
+    "description":                  "Scraping Current Health Sitation Information",
+    "version":                      "0.0.0",
+    "license":                      "GPL-3.0-only",
+    "private":                      true,
+    "author": {
+        "name":                     "Dr. Ralf S. Engelschall",
+        "email":                    "rse@engelschall.com",
+        "url":                      "http://engelschall.com"
+    },
+    "keywords":                     [ "upgrade", "package", "dependency", "npm", "package.json" ],
+    "repository":                   { "type": "git", "url":  "git://github.com/rse/health-situation.git" },
+    "bugs":                         { "url": "http://github.com/rse/health-situation/issues" },
+    "devDependencies": {
+        "babel-eslint":             "10.1.0",
+        "eslint":                   "7.12.1",
+        "eslint-config-standard":   "16.0.1",
+        "eslint-plugin-standard":   "4.0.2",
+        "eslint-plugin-promise":    "4.2.1",
+        "eslint-plugin-import":     "2.22.1",
+        "eslint-plugin-node":       "11.1.0"
+    },
+    "dependencies": {
+        "puppeteer-core":           "5.4.1",
+        "pdfjs-dist":               "2.5.207",
+        "pdf-scrape":               "0.9.0",
+        "got":                      "11.8.0",
+        "execa":                    "4.1.0",
+        "prettysize":               "2.0.0",
+        "typopro-web":              "4.2.4",
+        "chalk":                    "4.1.0",
+        "sprintfjs":                "1.2.16",
+        "prince":                   "1.8.3"
+    },
+    "scripts": {
+        "start":                    "node health-situation.js",
+        "lint":                     "eslint --config eslint.yaml *.js"
+    }
+}
