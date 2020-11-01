@@ -9,6 +9,7 @@ const fs        = require("fs")
 const url       = require("url")
 
 /*  external requirements  */
+const dotenv    = require("dotenv")
 const chalk     = require("chalk")
 const puppeteer = require("puppeteer-core")
 const got       = require("got")
@@ -18,6 +19,9 @@ const PDFScrape = require("pdf-scrape")
 const mkdirp    = require("mkdirp")
 
 ;(async () => {
+    /*  fetch environment variables  */
+    dotenv.config()
+
     /*  some verbose output support  */
     const verbose = (level, msg) => {
         if (level === 1)
