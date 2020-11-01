@@ -12,6 +12,7 @@ about the current health situation during the Corona pandemic. It is not
 intended for real public reuse, because it is just a private project and
 this code acts just as a sample on how to scrape information which is
 located at regularly changing areas in various PDF documents.
+The resulting report also contains german explanations only.
 
 Requirements
 ------------
