@@ -17,9 +17,11 @@ The resulting report also contains german explanations only.
 Requirements
 ------------
 
-This software requires Node.js's `node` and `npm` commands, Poppler's
-`pdftocairo` command and PrinceXML's `prince` command in your `$PATH`.
-It also requires a running Browserless/Puppeteer instance somewhere on the network.
+This software requires [Node.js](https://nodejs.org/)'s `node` and `npm` commands,
+[Poppler](https://poppler.freedesktop.org/)'s `pdftocairo` command and
+[PrinceXML](https://www.princexml.com/)'s `prince` command in your `$PATH`.
+It also requires a running [Browserless](https://www.browserless.io/)/[Puppeteer](https://pptr.dev/)
+instance somewhere on the network.
 
 Copyright & License
 -------------------
