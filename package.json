@@ -10,7 +10,7 @@
         "email":                    "rse@engelschall.com",
         "url":                      "http://engelschall.com"
     },
-    "keywords":                     [ "upgrade", "package", "dependency", "npm", "package.json" ],
+    "keywords":                     [ "corona", "covid-19", "health", "situation", "influenca", "deaths" ],
     "repository":                   { "type": "git", "url":  "git://github.com/rse/health-situation.git" },
     "bugs":                         { "url": "http://github.com/rse/health-situation/issues" },
     "devDependencies": {
