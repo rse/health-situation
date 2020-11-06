@@ -123,19 +123,19 @@ const mkdirp    = require("mkdirp")
 
         verbose(2, "parsing PDF artifact")
         const items = await pdfScrape.findMatching(result.body, {
-            info1: /Davon haben über das SEED/,
-            info2: /aktualisierte Daten in den Folgewochen/,
+            info1: /Meldungen .ber das SEED/,
+            info2: /ist in Abbildung 6/,
             info3: /Internationale Situatio/,
             info4: /Die Anzahl der eingesandten Proben/
         })
 
         verbose(2, "cropping PDF page and exporting to SVG")
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-1.svg`,
-            items.info1.p, items.info1.x, items.info1.y + 30, 600, 300)
+            items.info1.p, items.info1.x, items.info1.y + 15, 600, 300)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-2.svg`,
-            items.info2.p, items.info2.x, items.info2.y + 20, 600, 250)
+            items.info2.p, items.info2.x, items.info2.y - 250, 600, 250)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-3.svg`,
-            items.info3.p, items.info3.x, items.info3.y - 280, 600, 280)
+            items.info3.p, items.info3.x, items.info3.y - 340, 600, 270)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-4.svg`,
             items.info4.p, 0, items.info4.y - 310, 600, 310)
         await puppeteer.disconnect()
@@ -264,7 +264,7 @@ const mkdirp    = require("mkdirp")
         await pdfCroppedExport(`${srcDir}/divi.pdf`, `${dstDir}/divi-1.svg`,
             1, 30, 265, 600, 200)
         await pdfCroppedExport(`${srcDir}/divi.pdf`, `${dstDir}/divi-2.svg`,
-            1, 300, 565, 300, 70)
+            1, 300, 575, 300, 70)
         await puppeteer.disconnect()
     }
 
