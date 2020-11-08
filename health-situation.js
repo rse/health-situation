@@ -311,7 +311,7 @@ const mkdirp    = require("mkdirp")
         await puppeteer.page.goto(baseURL)
 
         verbose(2, "scraping Google page as PNG")
-        await new Promise((resolve) => setTimeout(resolve, 4000))
+        await new Promise((resolve) => setTimeout(resolve, 6000))
         await puppeteer.page.screenshot({ clip: { x: 0, y: 330, width: 980, height: 520 }, path: `${dstDir}/who-1.png` })
         await puppeteer.disconnect()
     }
