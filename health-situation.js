@@ -124,16 +124,16 @@ const mkdirp    = require("mkdirp")
         verbose(2, "parsing PDF artifact")
         const items = await pdfScrape.findMatching(result.body, {
             info1: /Meldungen .ber das SEED/,
-            info2: /ist in Abbildung 6/,
+            info2: /Abb. 5:/,
             info3: /Internationale Situatio/,
             info4: /Die Anzahl der eingesandten Proben/
         })
 
         verbose(2, "cropping PDF page and exporting to SVG")
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-1.svg`,
-            items.info1.p, items.info1.x, items.info1.y + 15, 600, 300)
+            items.info1.p, items.info1.x, items.info1.y + 30, 600, 260)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-2.svg`,
-            items.info2.p, items.info2.x, items.info2.y - 250, 600, 250)
+            items.info2.p, items.info2.x, items.info2.y - 230, 600, 230)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-3.svg`,
             items.info3.p, items.info3.x, items.info3.y - 340, 600, 270)
         await pdfCroppedExport(`${srcDir}/rki-influenza.pdf`, `${dstDir}/rki-influenza-4.svg`,
@@ -165,7 +165,7 @@ const mkdirp    = require("mkdirp")
 
         verbose(2, "parsing PDF artifact")
         const items = await pdfScrape.findMatching(result.body, {
-            stats:   /Gesamt\s+\(kumulativ\)/,
+            stats:   /Bestätigte Fälle/,
             curve:   /Abbildung 2: Anzahl der an das RKI/,
             rwert:   /7-Tage-R-Wert/,
             predict: /Abbildung 4: Darstellung/
@@ -173,7 +173,7 @@ const mkdirp    = require("mkdirp")
 
         verbose(2, "cropping PDF page and exporting to SVG")
         await pdfCroppedExport(`${srcDir}/rki-corona.pdf`, `${dstDir}/rki-corona-1.svg`,
-            items.stats.p, 50, items.stats.y, 600, 130)
+            items.stats.p, 50, items.stats.y, 600, 160)
         await pdfCroppedExport(`${srcDir}/rki-corona.pdf`, `${dstDir}/rki-corona-2.svg`,
             items.curve.p, items.curve.x, items.curve.y - 250, 600, 250)
         await pdfCroppedExport(`${srcDir}/rki-corona.pdf`, `${dstDir}/rki-corona-3.svg`,
