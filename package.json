@@ -15,16 +15,15 @@
     "bugs":                         { "url": "http://github.com/rse/health-situation/issues" },
     "devDependencies": {
         "babel-eslint":             "10.1.0",
-        "eslint":                   "7.12.1",
-        "eslint-config-standard":   "16.0.1",
-        "eslint-plugin-standard":   "4.0.2",
+        "eslint":                   "7.14.0",
+        "eslint-config-standard":   "16.0.2",
         "eslint-plugin-promise":    "4.2.1",
         "eslint-plugin-import":     "2.22.1",
         "eslint-plugin-node":       "11.1.0"
     },
     "dependencies": {
         "dotenv":                   "8.2.0",
-        "puppeteer-core":           "5.4.1",
+        "puppeteer-core":           "5.5.0",
         "pdfjs-dist":               "2.5.207",
         "pdf-scrape":               "0.9.0",
         "got":                      "11.8.0",
